@@ -19,7 +19,11 @@
           castDebugLogger.setEnabled(true);
         }
       });
-      context.start();
+
+      const options = new cast.framework.CastReceiverOptions();
+      options.disableIdleTimeout = true;
+
+      context.start(options);
     </script>
   </body>
 </html>
